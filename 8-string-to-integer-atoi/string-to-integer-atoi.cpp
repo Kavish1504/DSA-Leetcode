@@ -2,7 +2,7 @@ class Solution {
 public:
     bool negative=false;
     int solve(string s,int index,long long num,bool negative){
-        if(index>s.size() || !isdigit(s[index])){
+        if(index>=s.size() || !isdigit(s[index])){
             if(negative){
                 return -num;
             }
