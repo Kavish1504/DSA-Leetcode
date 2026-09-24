@@ -3,9 +3,8 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int,int> mp;
         for(int i=0;i<nums.size();i++){
-            int key=target-nums[i];
-            if(mp.find(key)!=mp.end()){
-                return {i,mp[key]};
+            if(mp.count(target-nums[i])){
+                return {mp[target-nums[i]],i};
             }
             mp[nums[i]]=i;
         }
